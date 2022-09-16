@@ -1,0 +1,68 @@
+name: build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: "[7.4-3.13] Build and push"
+        id: docker_build_74_313
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: 7.4-3.13.Dockerfile
+          tags: adhocore/php:7.4-alpine3.13
+
+      - name: "[7.4-3.14] Build and push"
+        id: docker_build_74_314
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: 7.4-3.14.Dockerfile
+          tags: adhocore/php:7.4-alpine3.14
+
+      - name: "[8.0-3.13] Build and push"
+        id: docker_build_80_313
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: 8.0-3.13.Dockerfile
+          tags: adhocore/php:8.0-alpine3.13
+
+      - name: "[8.0-3.14] Build and push"
+        id: docker_build_80_314
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: 8.0-3.14.Dockerfile
+          tags: adhocore/php:8.0-alpine3.14
+
+      - name: "[8.1-3.13] Build and push"
+        id: docker_build_81_313
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: 8.1-3.13.Dockerfile
+          tags: adhocore/php:8.1.alpine3.13
+
+      - name: "[8.1-3.14] Build and push"
+        id: docker_build_81_314
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          file: 8.1-3.14.Dockerfile
+          tags: adhocore/php:8.1.alpine3.14
+
