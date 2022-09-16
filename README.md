@@ -8,20 +8,20 @@ All the images are tagged on the name `adhocore/php`.
 
 Image Tag     | PHP Version | Alpine Version
 --------------|-------------|---------------
-8.1-alp3.13   | 8.1.10      | 3.13
-8.0-alp3.13   | 8.0.10      | 3.13
-7.4-alp3.13   | 7.4.30      | 3.13
+8.1-alpine3.13   | 8.1.10      | 3.13
+8.0-alpine3.13   | 8.0.10      | 3.13
+7.4-alpine3.13   | 7.4.30      | 3.13
 
-8.1-alp3.14   | 8.1.10      | 3.14
-8.0-alp3.14   | 8.0.10      | 3.14
-7.4-alp3.14   | 7.4.30      | 3.14
+8.1-alpine3.14   | 8.1.10      | 3.14
+8.0-alpine3.14   | 8.0.10      | 3.14
+7.4-alpine3.14   | 7.4.30      | 3.14
 
 ## Usage
 
 ```sh
-docker pull adhocore/php:8.1-alp3.13
+docker pull adhocore/php:8.1-alpine3.13
 
-docker pull adhocore/php:8.0-alp3.14
+docker pull adhocore/php:8.0-alpine3.14
 ```
 
 ### Credits
