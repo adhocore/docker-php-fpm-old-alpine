@@ -8,13 +8,12 @@ All the images are tagged on the name `adhocore/php`.
 
 Image Tag     | PHP Version | Alpine Version
 --------------|-------------|---------------
-8.1-alpine3.13   | 8.1.10      | 3.13
-8.0-alpine3.13   | 8.0.10      | 3.13
-7.4-alpine3.13   | 7.4.30      | 3.13
-
-8.1-alpine3.14   | 8.1.10      | 3.14
-8.0-alpine3.14   | 8.0.10      | 3.14
-7.4-alpine3.14   | 7.4.30      | 3.14
+8.1-alpine3.13   | 8.1.10   | 3.13
+8.0-alpine3.13   | 8.0.23   | 3.13
+7.4-alpine3.13   | 7.4.30   | 3.13
+8.1-alpine3.14   | 8.1.10   | 3.14
+8.0-alpine3.14   | 8.0.23   | 3.14
+7.4-alpine3.14   | 7.4.30   | 3.14
 
 ## Usage
 

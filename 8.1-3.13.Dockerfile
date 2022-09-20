@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM alpine:3.14
+FROM alpine:3.13
 
 # dependencies required for running "phpize"
 # these get automatically installed and removed by "docker-php-ext-*" (unless they're already installed)
@@ -30,6 +30,7 @@ RUN apk add --no-cache \
 
 # ensure www-data user exists
 RUN set -eux; \
+	addgroup -g 82 -S www-data; \
 	adduser -u 82 -D -S -G www-data www-data
 # 82 is the standard uid/gid for "www-data" in Alpine
 # https://git.alpinelinux.org/aports/tree/main/apache2/apache2.pre-install?h=3.14-stable
